@@ -10,10 +10,13 @@
 
 ## Start
 
+请先安装 [Python3](https://www.python.org)
+
 ### Windows
 
 ```
 cmd /c curl https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py -o Minecraft-Server-Maintaining.py
+
 py Minecraft-Server-Maintaining.py
 ```
 
@@ -21,5 +24,6 @@ py Minecraft-Server-Maintaining.py
 
 ```
 curl https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py -o Minecraft-Server-Maintaining.py
+
 python3 Minecraft-Server-Maintaining.py
 ```
