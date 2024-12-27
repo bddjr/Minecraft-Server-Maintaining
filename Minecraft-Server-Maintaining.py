@@ -37,23 +37,20 @@ connectionError = (
 class Handler(socketserver.BaseRequestHandler):
     def handle(self):
         c: socket.socket = self.request
-        try:
-            c.settimeout(5)
-            packetLen = c.recv(1)[0]
-            data = c.recv(packetLen)
-            match data[-1]:
-                case 1:
-                    # ping
-                    c.recv(2)
-                    c.send(description)
-                    data = c.recv(257)
-                    c.send(data)
-                case 2:
-                    # join
-                    c.recv(257)
-                    c.send(connectionError)
-        finally:
-            c.close()
+        c.settimeout(5)
+        packetLen = c.recv(1)[0]
+        data = c.recv(packetLen)
+        match data[-1]:
+            case 1:
+                # ping
+                c.recv(2)
+                c.send(description)
+                data = c.recv(257)
+                c.send(data)
+            case 2:
+                # join
+                c.recv(257)
+                c.send(connectionError)
 
 
 srv = socketserver.ThreadingTCPServer(ADDR, Handler)
