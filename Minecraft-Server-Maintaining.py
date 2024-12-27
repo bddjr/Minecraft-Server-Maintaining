@@ -45,11 +45,11 @@ class Handler(socketserver.BaseRequestHandler):
                 # ping
                 c.recv(2)
                 c.send(description)
-                data = c.recv(257)
+                data = c.recv(256)
                 c.send(data)
             case 2:
                 # join
-                c.recv(257)
+                c.recv(256)
                 c.send(connectionError)
 
 
