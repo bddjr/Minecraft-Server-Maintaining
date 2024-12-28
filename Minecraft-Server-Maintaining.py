@@ -1,16 +1,18 @@
-# Config
-ADDR = ("", 25565)
-DESCRIPTION_TEXT = "§c服务器正在维护\nServer Maintaining"
-DESCRIPTION_VERSION = "Server Maintaining"
-CONNECTION_ERROR = "§c服务器正在维护\nServer Maintaining"
-
-# ------
+#!/usr/bin/python3
 # Using MIT License.
 # https://github.com/bddjr/Minecraft-Server-Maintaining
 #
 # Tested version:
 #  - Python: 3.12.5
 #  - Minecraft: 1.21.4 1.12.2 1.8.9
+# ------
+
+# Config
+ADDR = ("", 25565)
+DESCRIPTION_TEXT = "§c服务器正在维护\nServer Maintaining"
+DESCRIPTION_VERSION = "Server Maintaining"
+CONNECTION_ERROR = "§c服务器正在维护\nServer Maintaining"
+
 # ------
 
 import socket, socketserver, json

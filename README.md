@@ -4,11 +4,13 @@
 
 ![](description.jpg)
 
-![](connection-error.jpg)
+![](joinError.jpg)
 
 ---
 
 ## Setup
+
+请确保已安装 [Python](https://www.python.org) ，版本不低于 3.10 。
 
 ### Linux
 
@@ -21,12 +23,10 @@ curl https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/h
 运行
 
 ```
-python3 Minecraft-Server-Maintaining.py
+./Minecraft-Server-Maintaining.py
 ```
 
 ### Windows
-
-请先安装 [Python3](https://www.python.org) 。
 
 下载
 
