@@ -40,12 +40,12 @@ class Handler(socketserver.BaseRequestHandler):
         c.settimeout(5)
         packetLen = c.recv(1)[0]
         data = c.recv(packetLen)
-        match data[-1]:
+        match data[packetLen - 1]:
             case 1:
                 # ping
                 c.recv(2)
                 c.send(description)
-                data = c.recv(256)
+                data = c.recv(10)
                 c.send(data)
             case 2:
                 # join
