@@ -27,10 +27,10 @@ description = json.dumps(
 
 description = bytes([len(description) + 3, 1, 0, len(description), 1]) + description
 
-connectionError = json.dumps(CONNECTION_ERROR).encode("utf-8")
+joinError = json.dumps(CONNECTION_ERROR).encode("utf-8")
 
-connectionError = (
-    bytes([len(connectionError) + 2, 0, len(connectionError)]) + connectionError
+joinError = (
+    bytes([len(joinError) + 2, 0, len(joinError)]) + joinError
 )
 
 
@@ -50,7 +50,7 @@ class Handler(socketserver.BaseRequestHandler):
             case 2:
                 # join
                 c.recv(256)
-                c.send(connectionError)
+                c.send(joinError)
 
 
 srv = socketserver.ThreadingTCPServer(ADDR, Handler)
