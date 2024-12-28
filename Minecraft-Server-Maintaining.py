@@ -11,7 +11,7 @@
 ADDR = ("", 25565)
 DESCRIPTION_TEXT = "§c服务器正在维护\nServer Maintaining"
 DESCRIPTION_VERSION = "Server Maintaining"
-CONNECTION_ERROR = "§c服务器正在维护\nServer Maintaining"
+JOIN_ERROR = "§c服务器正在维护\nServer Maintaining"
 
 # ------
 
@@ -29,7 +29,7 @@ description = json.dumps(
 
 description = bytes([len(description) + 3, 1, 0, len(description), 1]) + description
 
-joinError = json.dumps(CONNECTION_ERROR).encode("utf-8")
+joinError = json.dumps(JOIN_ERROR).encode("utf-8")
 
 joinError = bytes([len(joinError) + 2, 0, len(joinError)]) + joinError
 
