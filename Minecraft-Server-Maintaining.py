@@ -15,7 +15,7 @@ CONNECTION_ERROR = "§c服务器正在维护\nServer Maintaining"
 
 import socket, socketserver, json
 
-print(f"127.0.0.1:{ADDR[1]}")
+print(f"127.0.0.1:{ADDR[1]}\nPress Ctrl+C to stop.")
 
 description = json.dumps(
     {
@@ -29,9 +29,7 @@ description = bytes([len(description) + 3, 1, 0, len(description), 1]) + descrip
 
 joinError = json.dumps(CONNECTION_ERROR).encode("utf-8")
 
-joinError = (
-    bytes([len(joinError) + 2, 0, len(joinError)]) + joinError
-)
+joinError = bytes([len(joinError) + 2, 0, len(joinError)]) + joinError
 
 
 class Handler(socketserver.BaseRequestHandler):
@@ -54,4 +52,8 @@ class Handler(socketserver.BaseRequestHandler):
 
 
 srv = socketserver.ThreadingTCPServer(ADDR, Handler)
-srv.serve_forever()
+
+try:
+    srv.serve_forever()
+except KeyboardInterrupt:
+    pass
