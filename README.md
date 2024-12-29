@@ -31,7 +31,7 @@ curl -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/ref
 下载
 
 ```
-cmd /c curl -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py
+curl.exe -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py
 ```
 
 运行
