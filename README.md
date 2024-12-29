@@ -17,7 +17,7 @@
 下载
 
 ```
-curl https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py -o Minecraft-Server-Maintaining.py
+curl -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py
 ```
 
 运行
@@ -31,7 +31,7 @@ curl https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/h
 下载
 
 ```
-cmd /c curl https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py -o Minecraft-Server-Maintaining.py
+cmd /c curl -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py
 ```
 
 运行
