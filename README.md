@@ -15,7 +15,7 @@
 确认 python3 已安装，且版本不低于 3.10
 
 ```
-python3 --version
+python3 -V
 ```
 
 下载脚本
@@ -37,7 +37,7 @@ curl -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/ref
 确认 Python 已安装，且版本不低于 3.10
 
 ```
-py --version
+py -V
 ```
 
 下载脚本
