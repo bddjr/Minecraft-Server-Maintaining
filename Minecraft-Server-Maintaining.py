@@ -40,17 +40,17 @@ class Handler(socketserver.BaseRequestHandler):
         c.settimeout(5)
         packetLen = c.recv(1)[0]
         data = c.recv(packetLen)
-        match data[packetLen - 1]:
-            case 1:
-                # ping
-                c.recv(2)
-                c.send(description)
-                data = c.recv(10)
-                c.send(data)
-            case 2:
-                # join
-                c.recv(256)
-                c.send(joinError)
+        socketType = data[packetLen - 1]
+        if socketType == 1:
+            # ping
+            c.recv(2)
+            c.send(description)
+            data = c.recv(10)
+            c.send(data)
+        elif socketType == 2:
+            # join
+            c.recv(256)
+            c.send(joinError)
 
 
 srv = socketserver.ThreadingTCPServer(ADDR, Handler)

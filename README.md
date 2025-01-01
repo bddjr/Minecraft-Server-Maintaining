@@ -12,7 +12,7 @@
 
 ### Linux
 
-确认 python3 已安装，且版本不低于 3.10
+确认 python3 已安装
 
 ```
 python3 -V
@@ -34,7 +34,7 @@ curl -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/ref
 
 请预先 [下载 Python](https://www.python.org/downloads/) 并安装。
 
-确认 Python 已安装，且版本不低于 3.10
+确认 Python 已安装，且版本不低于 3
 
 ```
 py -V
