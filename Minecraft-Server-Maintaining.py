@@ -45,7 +45,10 @@ class Handler(socketserver.BaseRequestHandler):
             # ping
             c.recv(2)
             c.send(description)
-            data = c.recv(10)
+            try:
+                data = c.recv(10)
+            except:
+                return
             c.send(data)
         elif socketType == 2:
             # join
