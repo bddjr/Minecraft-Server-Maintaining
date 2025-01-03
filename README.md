@@ -24,6 +24,11 @@ python3 -V
 curl -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining/refs/heads/main/Minecraft-Server-Maintaining.py
 ```
 
+设置权限
+```
+chmod +x Minecraft-Server-Maintaining.py
+```
+
 运行
 
 ```
