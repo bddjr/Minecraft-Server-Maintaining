@@ -56,3 +56,9 @@ curl.exe -O https://raw.githubusercontent.com/bddjr/Minecraft-Server-Maintaining
 ```
 py Minecraft-Server-Maintaining.py
 ```
+
+---
+
+## Reference
+
+https://github.com/bangbang93/minecraft-protocol
